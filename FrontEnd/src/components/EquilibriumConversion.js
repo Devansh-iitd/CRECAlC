@@ -16,16 +16,16 @@ const EquilibriumConversion = () => {
         <div className='row'></div>
       <div className="row">
           <label htmlFor="input1">Kc</label>
-          <input type="text" id="input1" name="input1" />
+          <input type="text" id="kc" name="v" />
         </div>
         <div className="row">
           <label htmlFor="input2">Standard Heat of Reaction</label>
-          <input type="text" id="H_O" name="H_O" />
+          <input type="text" id="Hrx0" name="Hrx0" />
           J/mol
         </div>
         <div className="row">
           <label htmlFor="input3">Cp_a</label>
-          <input type="text" id="Cp_a" name="Cp_a" />
+          <input type="text" id="cpa" name="cpa" />
           J/mol K
         </div>
         <div className="row">
