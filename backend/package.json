@@ -10,6 +10,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mathjs": "^12.4.2",
+    "nerdamer": "^1.1.13",
+    "nodemon": "^3.1.0",
     "odex": "^3.0.0-rc.4"
   }
 }
