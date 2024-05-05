@@ -20,52 +20,52 @@ const HeatExchangerAnswer = () => {
         <div className="row">
           <div className="column">
             <label htmlFor="a">Value of a:</label>
-            <input type="text" id="a" name="a" />
+            <input type="text" id="a" name="a" onChange={handleChange}/>
           </div>
           <div className="column">
             <label htmlFor="b">Value of b:</label>
-            <input type="text" id="b" name="b" />
+            <input type="text" id="b" name="b" onChange={handleChange}/>
           </div>
           <div className="column">
             <label htmlFor="c">Value of c:</label>
-            <input type="text" id="c" name="c" />
+            <input type="text" id="c" name="c" onChange={handleChange}/>
           </div>
           <div className="column">
             <label htmlFor="d">Value of d:</label>
-            <input type="text" id="d" name="d" />
+            <input type="text" id="d" name="d" onChange={handleChange}/>
           </div>
         </div>
       <div className="row">
           <label htmlFor="input1">Reference Temperature:</label>
-          <input type="text" id="input1" name="input1" />
+          <input type="text" id="input1" name="input1" onChange={handleChange}/>
           K
         </div>
         <div className="row">
           <label htmlFor="input2">Temperature of Reaction:</label>
-          <input type="text" id="input2" name="input2" />
+          <input type="text" id="input2" name="input2" onChange={handleChange}/>
           W/m
         </div>
         <div className="row">
           <label htmlFor="input3">Standard Heat of Reaction at Tr:</label>
-          <input type="text" id="input3" name="input3" />
+          <input type="text" id="input3" name="input3" onChange={handleChange}/>
           J/mol
         </div>
         <div className="row">
           <div className="column">
             <label htmlFor="a">Cp of A (J/mol K)</label>
-            <input type="text" id="cpa" name="cpa" />
+            <input type="text" id="cpa" name="cpa" onChange={handleChange}/>
           </div>
           <div className="column">
             <label htmlFor="b">Cp of B (J/mol K)</label>
-            <input type="text" id="cpb" name="cpb" />
+            <input type="text" id="cpb" name="cpb" onChange={handleChange}/>
           </div>
           <div className="column">
             <label htmlFor="c">Cp of C (J/mol K)</label>
-            <input type="text" id="cpc" name="cpc" />
+            <input type="text" id="cpc" name="cpc" onChange={handleChange}/>
           </div>
           <div className="column">
             <label htmlFor="d">Cp of D (J/mol K)</label>
-            <input type="text" id="cpd" name="cpd" />
+            <input type="text" id="cpd" name="cpd" onChange={handleChange}/>
           </div>
         </div>  
             <h2>Heat of Reaction is : </h2> 
