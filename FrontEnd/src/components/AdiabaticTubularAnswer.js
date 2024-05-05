@@ -79,7 +79,7 @@ const data2 =
 </LineChart>
           </div>
         </div>
-        <h2>Volume of Adiabatic Tubular Reactor is : </h2>
+       {/* <h2>Volume of Adiabatic Tubular Reactor is : </h2>  */}
         <div className='row'><button className="button2" onClick={handleButtonClick}>Home</button></div>
             
       </div>

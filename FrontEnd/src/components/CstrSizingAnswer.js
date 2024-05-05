@@ -1,12 +1,31 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import axios from 'axios';
+import { useState,useEffect } from 'react';
 const CstrSizingAnswer = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const formData = location.state;
+    const [responses,setResponse] = useState();
     const handleButtonClick = () => {
         // Navigate to HeatExchanger component when the button is clicked
         navigate('/');
       };
+      useEffect( () => {
+        axios.post('http://localhost:5000/functions/tempcalc',formData)
+        .then((response) => {
+          //console.log(response.data);
+          setResponse(response.data);
+        }
+        )
+        .catch((error) => {
+            console.log(error);
+        });
+      }, []);
+
+      console.log(responses);
+    
   return (
     <div className="container">
       <div className="content">

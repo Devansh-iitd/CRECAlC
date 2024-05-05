@@ -1,12 +1,21 @@
 import React from 'react';
 import reactionImage from './Reaction.png';
 import { useNavigate } from 'react-router-dom';
+import {useState} from 'react';
 const HeatExchanger = () => {
     const navigate = useNavigate();
+    const [formData,setFormData] = useState({a:0,b:0,c:0,d:0,input1:0,input2:0,input3:0,cpa:0,cpb:0,cpc:0,cpd:0});
     const handleButtonClick = () => {
         // Navigate to HeatExchanger component when the button is clicked
-        navigate('./HeatExchangerAnswer');
+        navigate('./HeatExchangerAnswer', {state: {...formData}});
       };
+
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+        //console.log(name, value)
+        setFormData({ ...formData, [name]: value });
+    }
+
   return (
     <div className="container">
       <div className="content">
@@ -17,7 +26,7 @@ const HeatExchanger = () => {
         <div className="row">
           <div className="column">
             <label htmlFor="a">Value of a:</label>
-            <input type="text" id="a" name="a" />
+            <input type="text" id="a" name="a" onChange= {handleChange} />
           </div>
           <div className="column">
             <label htmlFor="b">Value of b:</label>

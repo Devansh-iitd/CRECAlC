@@ -1,8 +1,11 @@
 import React from 'react';
 import reactionImage from './Reaction.png';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
+import {useState, useEffect} from 'react'
 const HeatExchangerAnswer = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const formData = location.state;
     const handleButtonClick = () => {
         // Navigate to HeatExchanger component when the button is clicked
         navigate('/');
