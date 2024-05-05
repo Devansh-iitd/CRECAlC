@@ -16,18 +16,20 @@ const EquilibriumConversionAnswer = () => {
         <h1 className='headprocess'>Equilibrium Conversion</h1>
         </div>
         <LineChart width={400} height={400} data={[
-    { x: 1, temp: 100 },
-    { x: 2, temp: 150 },
-    { x: 3, temp: 125 },
+    { temp1: 100, x1: 80, temp2: 110, x2: 90 },
+    { temp1: 150, x1: 70, temp2: 160, x2: 85 },
+    { temp1: 125, x1: 90, temp2: 130, x2: 75 },
     // Add more data points as needed
 ]}>
-    <XAxis dataKey="temp" tickSize={1} label={{ value: 'Temperature', position: 'insideBottom', offset: -5 }} />
-    <YAxis label={{ value: 'X(Conversion)', angle: -90, position: 'insideLeft' }} />
+    <XAxis dataKey="temp1" tickSize={1} label={{ value: 'Temperature', position: 'insideBottom', offset:0 }} />
+    <YAxis label={{ value: 'X', angle: -90, position: 'insideLeft' }} />
     <CartesianGrid stroke="#555" strokeDasharray="3 3" opacity={0.5} />
     <Tooltip />
     <Legend />
-    <Line type="monotone" dataKey="x" stroke="#8884d8" strokeWidth={2} />
+    <Line type="monotone" dataKey="x1" name="Line 1" stroke="#8884d8" strokeWidth={2} />
+    <Line type="monotone" dataKey="x2" name="Line 2" stroke="#82ca9d" strokeWidth={2} />
 </LineChart>
+
         
             <h2>Conversion is : </h2> 
             <button className="button3" onClick={handleButtonClick}>Home</button>
