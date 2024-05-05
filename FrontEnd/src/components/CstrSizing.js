@@ -13,53 +13,54 @@ const CstrSizing = () => {
         </div>
         <div className="row">
           <div className="column">
-            <label htmlFor="a">Value of a:</label>
+            <label htmlFor="a">Volume (in m^3)</label>
             <input type="text" id="a" name="a" />
           </div>
           <div className="column">
-            <label htmlFor="b">Value of b:</label>
+            <label htmlFor="b">Initial Conc</label>
             <input type="text" id="b" name="b" />
           </div>
           <div className="column">
-            <label htmlFor="c">Value of c:</label>
+            <label htmlFor="c">A</label>
             <input type="text" id="c" name="c" />
           </div>
           <div className="column">
-            <label htmlFor="d">Value of d:</label>
-            <input type="text" id="d" name="d" />
+            <label htmlFor="d">Initial Molar flow rate</label>
+            <input type="text" id="Fa_O" name="Fa_O" />
           </div>
         </div>
       <div className="row">
-          <label htmlFor="input1">Reference Temperature:</label>
+          <label htmlFor="input1">T</label>
           <input type="text" id="input1" name="input1" />
           K
         </div>
         <div className="row">
-          <label htmlFor="input2">Temperature of Reaction:</label>
+          <label htmlFor="input2">Ea</label>
           <input type="text" id="input2" name="input2" />
-          W/m
+          J/mol
         </div>
         <div className="row">
-          <label htmlFor="input3">Standard Heat of Reaction at Tr:</label>
+          <label htmlFor="input3">Overall Heat Transfer Coefficient</label>
           <input type="text" id="input3" name="input3" />
-          J/mol
+          W/K
+        </div>
+        <div className='row'>
+        <div className="column">
+            <label htmlFor="cpb">Standard Heat of Reaction</label>
+            <input type="text" id="H_O" name="H_O" />
+            W
+          </div>
         </div>
         <div className="row">
           <div className="column">
             <label htmlFor="cpa">Cp of A (J/mol K)</label>
             <input type="text" id="cpa" name="cpa" />
           </div>
+          
           <div className="column">
-            <label htmlFor="cpb">Cp of B (J/mol K)</label>
-            <input type="text" id="cpb" name="cpb" />
-          </div>
-          <div className="column">
-            <label htmlFor="cpc">Cp of C (J/mol K)</label>
+            <label htmlFor="cpc"> T_O</label>
             <input type="text" id="cpc" name="cpc" />
-          </div>
-          <div className="column">
-            <label htmlFor="cpd">Cp of D (J/mol K)</label>
-            <input type="text" id="cpd" name="cpd" />
+            K
           </div>
         </div>
         <div className='row'>

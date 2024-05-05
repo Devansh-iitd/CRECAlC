@@ -14,54 +14,60 @@ const AdiabaticTubular = () => {
         </div>
         <div className="row">
           <div className="column">
-            <label htmlFor="a">Value of a:</label>
-            <input type="text" id="a" name="a" />
+            <label htmlFor="a">Standard Heat(H_O)</label>
+            <input type="text" id="H_O" name="H_O" />
+            W
           </div>
           <div className="column">
-            <label htmlFor="b">Value of b:</label>
-            <input type="text" id="b" name="b" />
+            <label htmlFor="b">Molar Flow Rate(mol/s)</label>
+            <input type="text" id="FA_O" name="FA_O" />
+            
           </div>
           <div className="column">
-            <label htmlFor="c">Value of c:</label>
-            <input type="text" id="c" name="c" />
+            <label htmlFor="c">Initial Conc (M)</label>
+            <input type="text" id="CA_O" name="CA_O" />
           </div>
           <div className="column">
-            <label htmlFor="d">Value of d:</label>
-            <input type="text" id="d" name="d" />
+            <label htmlFor="d">Reversible?</label>
+            <input type="text" id="r" name="r" />
           </div>
         </div>
       <div className="row">
-          <label htmlFor="input1">Reference Temperature:</label>
-          <input type="text" id="input1" name="input1" />
+          <label htmlFor="input1">T1</label>
+          <input type="text" id="input1" name="T1" />
           K
         </div>
         <div className="row">
-          <label htmlFor="input2">Temperature of Reaction:</label>
-          <input type="text" id="input2" name="input2" />
-          W/m
+          <label htmlFor="input2">T2</label>
+          <input type="text" id="input2" name="T2" />
+          K
         </div>
         <div className="row">
-          <label htmlFor="input3">Standard Heat of Reaction at Tr:</label>
-          <input type="text" id="input3" name="input3" />
-          J/mol
+          <label htmlFor="input3">T_O</label>
+          <input type="text" id="input3" name="T_O" />
+          K
         </div>
         <div className="row">
           <div className="column">
-            <label htmlFor="cpa">Cp of A (J/mol K)</label>
-            <input type="text" id="cpa" name="cpa" />
+            <label htmlFor="cpa">Ea (J/mol)</label>
+            <input type="text" id="Ea" name="Ea" />
           </div>
           <div className="column">
-            <label htmlFor="cpb">Cp of B (J/mol K)</label>
-            <input type="text" id="cpb" name="cpb" />
+            <label htmlFor="cpb">K1</label>
+            <input type="text" id="K1" name="K1" />
           </div>
           <div className="column">
-            <label htmlFor="cpc">Cp of C (J/mol K)</label>
-            <input type="text" id="cpc" name="cpc" />
+            <label htmlFor="cpc">Kc_O</label>
+            <input type="text" id="Kc_O" name="Kc_O" />
           </div>
           <div className="column">
-            <label htmlFor="cpd">Cp of D (J/mol K)</label>
-            <input type="text" id="cpd" name="cpd" />
+            <label htmlFor="cpd">Cp_a (J/mol K)</label>  
+            <input type="text" id="Cp_a" name="Cp_a" />
           </div>
+        </div>
+        <div className='row'>
+            <label htmlFor="cpd">Gas Phase</label>  
+            <input type="text" id="g" name="g" />
         </div>
         <div className='row'>
             <button className="button2" onClick={handleButtonClick}>Reactor Volume and Graphs</button>
