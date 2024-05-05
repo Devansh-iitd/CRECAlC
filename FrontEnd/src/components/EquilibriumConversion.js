@@ -1,11 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { useState } from 'react';
+import axios from 'axios';
 const EquilibriumConversion = () => {
     const navigate = useNavigate();
     const handleButtonClick = () => {
         // Navigate to HeatExchanger component when the button is clicked
         navigate('./EquilibriumConversionAnswer');
+      };
+      const [formData, setFormData]=useState({
+        Kc: "",
+        Hrx0: "",
+        cpa: "",
+        T1: "",
+      });
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
       };
   return (
     <div className="container">
