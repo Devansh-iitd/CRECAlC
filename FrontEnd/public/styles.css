@@ -1,0 +1,117 @@
+html {
+    font-family: "Montserrat", sans-serif;
+  }
+body {
+   
+    background: rgba(238, 238, 238, 0.7); /* Background color with 30% transparency */
+    background-image: url("https://www.aiche.org/sites/default/files/images/Chenected/lead/shutterstock7862944481.png");
+    background-size: cover; /* Cover the entire background */
+    background-position: top;
+    padding: 0 16px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px; /* Adjust height as needed */
+    width: 800px; /* Adjust width as needed */
+    background-color: rgba(255, 255, 255, 0.90); /* White background with 50% transparency */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px;
+    
+
+}
+.Heading {
+  font-size: 3.5em; /* Adjust the size as needed */
+  color: white; /* Text color */
+  text-align: center; /* Center alignment */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility on dark backgrounds */
+  margin-bottom: 50px; /* Increase the gap between heading div and container div */
+  background: linear-gradient(to right, #3a3a3a, #000000); /* Gradient background */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Hide actual text color */
+  font-family: 'Roboto', sans-serif;
+}
+  .button {
+    flex: 1; /* Take the whole height of the container */
+    width: 80%; /* Take the whole width of the container */
+    margin: 20px 0; /* Adjust the margin between buttons */
+    padding: 20px 20px; /* Adjust padding to increase button size */
+    margin-left: 80px;  
+    font-size: 1.3em; /* Increase font size if needed */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #4CAF50; /* Default button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+  }
+  
+  .button:hover {
+    background-color: #45a049; /* Darker color on hover */
+  }
+  
+  .row {
+    display: flex;
+    justify-content:left; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin-bottom: 20px; /* Adjust spacing between rows */
+  }
+  
+  label {
+    margin-right: 10px; /* Adjust spacing between label and input */
+  }
+  
+  input {
+    padding: 10px; /* Adjust input padding */
+    border-radius: 5px; /* Adjust input border radius */
+    border: 1px solid #ccc; /* Add a border */
+  }
+  .headprocess{
+    margin-top: -40px;
+    margin-bottom: -30px;
+  }
+  .headprocess2{
+    margin-top: -100px;
+    margin-bottom: -100px;
+  }
+  .button2{
+    font-size: 1.2em; /* Increase font size if needed */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #4CAF50; /* Default button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    margin: 15px 0; /* Adjust the margin between buttons */
+    padding: 10px 10px; 
+  }
+  .button2:hover {
+    background-color: #45a049; /* Darker color on hover */
+    
+  }
+  .headprocess3{
+    margin-top: 30px;
+  }
+  .button3{
+    font-size: 1.2em; /* Increase font size if needed */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #4CAF50; /* Default button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: -20px;
+    padding: 10px 10px; 
+  }
+  .button3:hover {
+    background-color: #45a049; /* Darker color on hover */
+    
+  }
+  
+
