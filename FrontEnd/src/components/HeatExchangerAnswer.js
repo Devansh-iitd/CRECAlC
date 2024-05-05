@@ -2,14 +2,27 @@ import React from 'react';
 import reactionImage from './Reaction.png';
 import { useNavigate,useLocation } from 'react-router-dom';
 import {useState, useEffect} from 'react'
+import axios from 'axios';
 const HeatExchangerAnswer = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const formData = location.state;
+    const [responses,setResponse]= useState();
     const handleButtonClick = () => {
         // Navigate to HeatExchanger component when the button is clicked
         navigate('/');
       };
+    useEffect(() => {
+      axios.post('http://localhost:5000/functions/HOR',formData)
+      .then((response) => {
+        console.log(response.data);
+        setResponse(response.data);
+      }
+      )
+      .catch((error) => {
+          console.log(error);
+      });
+    })
   return (
     <div className="container">
       <div className="content">

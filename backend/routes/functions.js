@@ -38,6 +38,7 @@ router.route('/adiabaticTubular').post((req,res)=> {
 })
 
 router.route('/HOR').post( (req,res) => {
+    console.log(req.body)
     const {Hrx0, coeffs,cps,T,Tr} = req.body;
 
    return res.json(Hrx(Hrx0, coeffs,cps,T,Tr));
