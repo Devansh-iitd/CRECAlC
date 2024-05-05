@@ -27,21 +27,21 @@ const EquilibriumConversion = () => {
         <div className='row'></div>
       <div className="row">
           <label htmlFor="input1">Kc</label>
-          <input type="text" id="kc" name="v" />
+          <input type="text" id="kc" name="v" onChange={handleChange}/>
         </div>
         <div className="row">
           <label htmlFor="input2">Standard Heat of Reaction</label>
-          <input type="text" id="Hrx0" name="Hrx0" />
+          <input type="text" id="Hrx0" name="Hrx0" onChange={handleChange}/>
           J/mol
         </div>
         <div className="row">
           <label htmlFor="input3">Cp_a</label>
-          <input type="text" id="cpa" name="cpa" />
+          <input type="text" id="cpa" name="cpa" onChange={handleChange}/>
           J/mol K
         </div>
         <div className="row">
           <label htmlFor="input3">T1</label>
-          <input type="text" id="T1" name="T1" />
+          <input type="text" id="T1" name="T1" onChange={handleChange}/>
           K
         </div>
         
