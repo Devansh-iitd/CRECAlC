@@ -28,52 +28,52 @@ const CstrSizing = () => {
         <div className="row">
           <div className="column">
             <label htmlFor="a">Volume (in m^3)</label>
-            <input type="text" id="V" name="V" />
+            <input type="text" id="V" name="V" onChange={handleChange}/>
           </div>
           <div className="column">
             <label htmlFor="b">Initial Conc</label>
-            <input type="text" id="Ca0" name="Ca0" />
+            <input type="text" id="Ca0" name="Ca0" onChange={handleChange}/>
           </div>
           <div className="column">
             <label htmlFor="c">A</label>
-            <input type="text" id="A" name="A" />
+            <input type="text" id="A" name="A" onChange={handleChange}/>
           </div>
           <div className="column">
             <label htmlFor="d">Initial Molar flow rate</label>
-            <input type="text" id="Fa0" name="Fa0" />
+            <input type="text" id="Fa0" name="Fa0" onChange={handleChange}/>
           </div>
         </div>
       <div className="row">
           <label htmlFor="input1">T</label>
-          <input type="text" id="T" name="T" />
+          <input type="text" id="T" name="T" onChange={handleChange}/>
           K
         </div>
         <div className="row">
           <label htmlFor="input2">Ea</label>
-          <input type="text" id="E" name="E" />
+          <input type="text" id="E" name="E" onChange={handleChange}/>
           J/mol
         </div>
         <div className="row">
           <label htmlFor="input3">Overall Heat Transfer Coefficient</label>
-          <input type="text" id="Ua" name="Ua" />
+          <input type="text" id="Ua" name="Ua" onChange={handleChange}/>
           W/K
         </div>
         <div className='row'>
         <div className="column">
             <label htmlFor="cpb">Standard Heat of Reaction</label>
-            <input type="text" id="Hrx0" name="Hrx0" />
+            <input type="text" id="Hrx0" name="Hrx0" onChange={handleChange}/>
             W
           </div>
         </div>
         <div className="row">
           <div className="column">
             <label htmlFor="cpa">Cp of A (J/mol K)</label>
-            <input type="text" id="cpa" name="cpa" />
+            <input type="text" id="cpa" name="cpa" onChange={handleChange}/>
           </div>
           
           <div className="column">
             <label htmlFor="cpc"> T_O</label>
-            <input type="text" id="T0" name="T0" />
+            <input type="text" id="T0" name="T0" onChange={handleChange}/>
             K
           </div>
         </div>
