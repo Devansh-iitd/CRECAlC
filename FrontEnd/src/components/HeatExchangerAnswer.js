@@ -23,6 +23,7 @@ const HeatExchangerAnswer = () => {
           console.log(error);
       });
     })
+    console.log(responses)
   return (
     <div className="container">
       <div className="content">
@@ -33,55 +34,55 @@ const HeatExchangerAnswer = () => {
         <div className="row">
           <div className="column">
             <label htmlFor="a">Value of a:</label>
-            <input type="text" id="a" name="a" onChange={handleChange}/>
+            <input type="text" id="a" name="a"/>
           </div>
           <div className="column">
             <label htmlFor="b">Value of b:</label>
-            <input type="text" id="b" name="b" onChange={handleChange}/>
+            <input type="text" id="b" name="b"/>
           </div>
           <div className="column">
             <label htmlFor="c">Value of c:</label>
-            <input type="text" id="c" name="c" onChange={handleChange}/>
+            <input type="text" id="c" name="c"/>
           </div>
           <div className="column">
             <label htmlFor="d">Value of d:</label>
-            <input type="text" id="d" name="d" onChange={handleChange}/>
+            <input type="text" id="d" name="d" />
           </div>
         </div>
       <div className="row">
           <label htmlFor="input1">Reference Temperature:</label>
-          <input type="text" id="input1" name="input1" onChange={handleChange}/>
+          <input type="text" id="input1" name="input1" />
           K
         </div>
         <div className="row">
           <label htmlFor="input2">Temperature of Reaction:</label>
-          <input type="text" id="input2" name="input2" onChange={handleChange}/>
+          <input type="text" id="input2" name="input2" />
           W/m
         </div>
         <div className="row">
           <label htmlFor="input3">Standard Heat of Reaction at Tr:</label>
-          <input type="text" id="input3" name="input3" onChange={handleChange}/>
+          <input type="text" id="input3" name="input3" />
           J/mol
         </div>
         <div className="row">
           <div className="column">
             <label htmlFor="a">Cp of A (J/mol K)</label>
-            <input type="text" id="cpa" name="cpa" onChange={handleChange}/>
+            <input type="text" id="cpa" name="cpa" />
           </div>
           <div className="column">
             <label htmlFor="b">Cp of B (J/mol K)</label>
-            <input type="text" id="cpb" name="cpb" onChange={handleChange}/>
+            <input type="text" id="cpb" name="cpb" />
           </div>
           <div className="column">
             <label htmlFor="c">Cp of C (J/mol K)</label>
-            <input type="text" id="cpc" name="cpc" onChange={handleChange}/>
+            <input type="text" id="cpc" name="cpc" />
           </div>
           <div className="column">
             <label htmlFor="d">Cp of D (J/mol K)</label>
-            <input type="text" id="cpd" name="cpd" onChange={handleChange}/>
+            <input type="text" id="cpd" name="cpd" />
           </div>
         </div>  
-            <h2>Heat of Reaction is : </h2> 
+            <h2>Heat of Reaction is :{responses} </h2> 
             <button className="button2" onClick={handleButtonClick}>Home</button>
       </div>
     </div>

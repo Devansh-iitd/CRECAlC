@@ -38,20 +38,26 @@ router.route('/adiabaticTubular').post((req,res)=> {
 })
 
 router.route('/HOR').post( (req,res) => {
-    console.log(req.body)
-    const {Hrx0, coeffs,cps,T,Tr} = req.body;
-
+   // console.log(req.body)
+    
+    const {Hrx0,a,b,c,d,cpa,cpb,cpc,cpd,T,Tr} = req.body;
+    const coeffs = [a,b,c,d];
+    const cps = [cpa,cpb,cpc,cpd];
+    
    return res.json(Hrx(Hrx0, coeffs,cps,T,Tr));
 }
     )
 
 router.route('/equilibriumConversion').post((req,res) => {
+    console.log(req.body);
     const {kc, Hrx0, cpa, T1} = req.body;
     return res.json(equilibriumConversion(kc, Hrx0, cpa, T1));
 })
 
 router.route('/tempcalc').post((req,res) => {
+    console.log(req.body)
     const {V,Ca0,A,Fa0,T,E,Ua,cpa,Hrx0,T0} = req.body;
+
     return res.json(tempcalc(V,Ca0,A,Fa0,T,E,Ua,cpa,Hrx0,T0));
 })
 

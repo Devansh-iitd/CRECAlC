@@ -7,7 +7,8 @@ const CstrSizingAnswer = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const formData = location.state;
-    const [responses,setResponse] = useState();
+    const [responses,setResponse] = useState({Xebs:[],Xmbs:[],T:[]});
+    
     const handleButtonClick = () => {
         // Navigate to HeatExchanger component when the button is clicked
         navigate('/');
@@ -25,6 +26,9 @@ const CstrSizingAnswer = () => {
       }, []);
 
       console.log(responses);
+
+  
+
     
   return (
     <div className="container">

@@ -3,12 +3,13 @@ const nerdamer = require('nerdamer/all');
 
 
 const equilibriumConversion = (kc, Hrx0, cpa, T1,E=0) => {
-  const R = 8.31;
+  const R = 1.98;
 
-  const T=[],Xebs=[],Xes=[];
+  var T=[],Xebs=[],Xes=[];
 
   
-    for( i=T1;i<=T1+400; i+=2){
+    for( let i=300;i<=600; i=i+5){
+      
 
       const ke = kc * Math.exp((Hrx0 * (1 / T1 - 1 / i)/R) );
       const Xeb = cpa*(i - T1) / (-Hrx0);
@@ -16,6 +17,8 @@ const equilibriumConversion = (kc, Hrx0, cpa, T1,E=0) => {
         T.push(i);
         Xebs.push(Xeb);
         Xes.push(Xe);
+        //console.log(`Iteration at T=${i}: ke=${ke}, Xeb=${Xeb}, Xe=${Xe}`);
+       
     }
 
     // console.log(T[100],Xebs[100],Xes[100])
