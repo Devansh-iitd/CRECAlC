@@ -5,30 +5,34 @@ import axios from 'axios';
 
 const AdiabaticTubular = () => {
     const navigate = useNavigate();
-    const handleButtonClick = () => {
-        // Navigate to HeatExchanger component when the button is clicked
-        navigate('./AdiabaticTubularAnswer');
-        
-
-      };
+    
       const [formData, setFormData] = useState({
-        H_O: "",
-        FA_O: "",
-        CA_O: "",
-        r: "",
+        Hrx0: "",
+        Fa0: "",
+        Ca0: "",
+        reversible: "",
         T1: "",
         T2: "",
-        T_O: "",
-        Ea: "",
-        K1: "",
-        Kc_O: "",
-        Cp_a: "",
-        g: "",
+        T0: "",
+        E: "",
+        k1: "",
+        kc0: "",
+        Cpa: "",
+        gasphase: "",
       });
       const handleChange = (e) => {
         const { name, value } = e.target;
+        console.log(name, value)
         setFormData({ ...formData, [name]: value });
+        console.log(formData)
       };
+
+      const handleButtonClick = () => {
+        // Navigate to HeatExchanger component when the button is clicked
+        navigate('./AdiabaticTubularAnswer',{ state: {...formData}});
+
+        };
+      
   return (
     <div className="container">
       <div className="content">
@@ -38,21 +42,21 @@ const AdiabaticTubular = () => {
         <div className="row">
           <div className="column">
             <label htmlFor="a">Standard Heat(H_O)</label>
-            <input type="text" id="H_O" name="H_O" onChange={handleChange} />
+            <input type="text" id="Hrx0" name="Hrx0" onChange={handleChange} />
             W
           </div>
           <div className="column">
             <label htmlFor="b">Molar Flow Rate(mol/s)</label>
-            <input type="text" id="FA_O" name="FA_O" onChange={handleChange} />
+            <input type="text" id="Fa0" name="Fa0" onChange={handleChange} />
             
           </div>
           <div className="column">
             <label htmlFor="c">Initial Conc (M)</label>
-            <input type="text" id="CA_O" name="CA_O" onChange={handleChange} />
+            <input type="text" id="Ca0" name="Ca0" onChange={handleChange} />
           </div>
           <div className="column">
             <label htmlFor="d">Reversible?</label>
-            <input type="text" id="r" name="r" onChange={handleChange} />
+            <input type="text" id="reversible" name="reversible" onChange={handleChange} />
           </div>
         </div>
       <div className="row">
@@ -67,30 +71,30 @@ const AdiabaticTubular = () => {
         </div>
         <div className="row">
           <label htmlFor="input3">T_O</label>
-          <input type="text" id="input3" name="T_O" onChange={handleChange} />
+          <input type="text" id="input3" name="T0" onChange={handleChange} />
           K
         </div>
         <div className="row">
           <div className="column">
             <label htmlFor="cpa">Ea (J/mol)</label>
-            <input type="text" id="Ea" name="Ea" onChange={handleChange} />
+            <input type="text" id="E" name="E" onChange={handleChange} />
           </div>
           <div className="column">
             <label htmlFor="cpb">K1</label>
-            <input type="text" id="K1" name="K1" onChange={handleChange} />
+            <input type="text" id="k1" name="k1" onChange={handleChange} />
           </div>
           <div className="column">
             <label htmlFor="cpc">Kc_O</label>
-            <input type="text" id="Kc_O" name="Kc_O" onChange={handleChange} />
+            <input type="text" id="kc0" name="kc0" onChange={handleChange} />
           </div>
           <div className="column">
             <label htmlFor="cpd">Cp_a (J/mol K)</label>  
-            <input type="text" id="Cp_a" name="Cp_a" onChange={handleChange} />
+            <input type="text" id="Cpa" name="Cpa" onChange={handleChange} />
           </div>
         </div>
         <div className='row'>
             <label htmlFor="cpd">Gas Phase</label>  
-            <input type="text" id="g" name="g" onChange={handleChange} />
+            <input type="text" id="gasphase" name="gasphase" onChange={handleChange} />
         </div>
         <div className='row'>
             <button className="button2" onClick={handleButtonClick}>Reactor Volume and Graphs</button>
@@ -100,3 +104,5 @@ const AdiabaticTubular = () => {
   );
 };
 export default AdiabaticTubular;
+
+
