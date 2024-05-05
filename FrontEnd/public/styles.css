@@ -1,0 +1,54 @@
+html {
+    font-family: "Montserrat", sans-serif;
+  }
+body {
+   
+    background: rgba(238, 238, 238, 0.7); /* Background color with 30% transparency */
+    background-image: url("https://www.aiche.org/sites/default/files/images/Chenected/lead/shutterstock7862944481.png");
+    background-size: cover; /* Cover the entire background */
+    background-position: top;
+    padding: 0 16px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px; /* Adjust height as needed */
+    width: 800px; /* Adjust width as needed */
+    background-color: rgba(255, 255, 255, 0.90); /* White background with 50% transparency */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px;
+}
+.Heading {
+    font-size: 2.8em; /* Adjust the size as needed */
+    color: white; /* Text color */
+    text-align: center; /* Center alignment */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility on dark backgrounds */
+    margin-bottom: 200px;
+    background: linear-gradient(to right, #ff6b6b, #556270); /* Gradient background */
+    -webkit-text-fill-color: transparent; /* Hide actual text color */
+  }
+  .button {
+    flex: 1; /* Take the whole height of the container */
+    width: 100%; /* Take the whole width of the container */
+    margin: 20px 0; /* Adjust the margin between buttons */
+    padding: 20px 30px; /* Adjust padding to increase button size */
+    font-size: 1.3em; /* Increase font size if needed */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    background-color: #4CAF50; /* Default button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+  }
+  
+  .button:hover {
+    background-color: #45a049; /* Darker color on hover */
+  }
+  
+  
