@@ -3,7 +3,7 @@ const nerdamer = require('nerdamer/all');
 
 
 const equilibriumConversion = (kc, Hrx0, cpa, T1,E=0) => {
-  const R = 1.98;
+  const R = 1.987;
 
   var T=[],Xebs=[],Xes=[];
 
