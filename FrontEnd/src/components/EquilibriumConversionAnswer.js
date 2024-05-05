@@ -88,7 +88,6 @@ const EquilibriumConversionAnswer = () => {
           />
         </LineChart>
 
-        <h2>Conversion is : </h2>
         <button className="button3" onClick={handleButtonClick}>
           Home
         </button>
