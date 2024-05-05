@@ -7,35 +7,32 @@ const odex = require('odex');
 
 
 router.route('/adiabaticTubular').post((req,res)=> {
+    //console.log(req.body)
     const {Hrx0,Fa0,Ca0,reversible,T1,T2,T0,E,k1,kc0,Cpa,gasphase} = req.body;
     const derivative = ATR(Hrx0,Fa0,Ca0,reversible,T1,T2,T0,E,k1,kc0,Cpa,gasphase);
     f = new odex.Solver(derivative, 1).integrate(0,[0]);
     //console.log(f(676));
     X=[], T=[],V=[];
     let value=0.2;
+
+    //console.log(f(0.4))
       
     while(true){
         X.push(f(value));
         T.push(T0-(Hrx0*f(value))/Cpa);
         V.push(value);
-        value+=0.2;
+        value+=0.1;
         if(X[X.length-1]-X[X.length-2]<0.0001){
-            value +=0.5;
+            value +=0.3;
         }
-        else if(X[X.length-1]-X[X.length-2]>0.01){
-            value +=0.2;
-        }
-        if(X[X.length-1]-X[X.length-2]<0.000001)
+
+        if(X[X.length-1]-X[X.length-2]<0.000000001)
             break;
         if(value>6){
             break;
         }
-
-        
-        
-
-
-    }
+}
+   // console.log(X,T,V)
    return res.json({X,T,V});
 
 })
