@@ -53,28 +53,28 @@ const HeatExchanger = () => {
         <div className="row">
           <label htmlFor="input2">Temperature of Reaction:</label>
           <input type="text" id="T" name="T" onChange= {handleChange}  />
-          W/m
+          K
         </div>
         <div className="row">
           <label htmlFor="input3">Standard Heat of Reaction at Tr:</label>
           <input type="text" id="Hrx0" name="Hrx0" onChange= {handleChange}  />
-          J/mol
+          cal/mol
         </div>
         <div className="row">
           <div className="column">
-            <label htmlFor="cpa">Cp of A (J/mol K)</label>
+            <label htmlFor="cpa">Cp of A (cal/mol K)</label>
             <input type="text" id="cpa" name="cpa" onChange= {handleChange} />
           </div>
           <div className="column">
-            <label htmlFor="cpb">Cp of B (J/mol K)</label>
+            <label htmlFor="cpb">Cp of B (cal/mol K)</label>
             <input type="text" id="cpb" name="cpb" onChange= {handleChange}  />
           </div>
           <div className="column">
-            <label htmlFor="cpc">Cp of C (J/mol K)</label>
+            <label htmlFor="cpc">Cp of C (cal/mol K)</label>
             <input type="text" id="cpc" name="cpc" onChange= {handleChange}  />
           </div>
           <div className="column">
-            <label htmlFor="cpd">Cp of D (J/mol K)</label>
+            <label htmlFor="cpd">Cp of D (cal/mol K)</label>
             <input type="text" id="cpd" name="cpd" onChange= {handleChange} />
           </div>
         </div>

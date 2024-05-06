@@ -56,9 +56,9 @@ router.route('/equilibriumConversion').post((req,res) => {
 
 router.route('/tempcalc').post((req,res) => {
     console.log(req.body)
-    const {V,Ca0,A,Fa0,T,E,Ua,cpa,Hrx0,T0} = req.body;
+    const {V,Ca0,A,Fa0,T,E,Ua,Hrx0,T0,Fb0,Fm0,Cpa,Cpb,Cpc,Cpm} = req.body;
 
-    return res.json(tempcalc(V,Ca0,A,Fa0,T,E,Ua,cpa,Hrx0,T0));
+    return res.json(tempcalc(V,Ca0,A,Fa0,T,E,Ua,Hrx0,T0,Fb0,Fm0,Cpa,Cpb,Cpc,Cpm));
 })
 
 module.exports = router;

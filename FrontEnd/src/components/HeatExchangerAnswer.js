@@ -7,7 +7,7 @@ const HeatExchangerAnswer = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const formData = location.state;
-    const [responses,setResponse]= useState();
+    const [responses,setResponse]= useState(0);
     const handleButtonClick = () => {
         // Navigate to HeatExchanger component when the button is clicked
         navigate('/');
@@ -16,7 +16,7 @@ const HeatExchangerAnswer = () => {
       axios.post('http://localhost:5000/functions/HOR',formData)
       .then((response) => {
         console.log(response.data);
-        setResponse(response.data);
+        setResponse((response.data/1000).toFixed(2));
       }
       )
       .catch((error) => {
@@ -24,6 +24,7 @@ const HeatExchangerAnswer = () => {
       });
     })
     console.log(responses)
+    let n= responses;
   return (
     <div className="container">
       <div className="content">
@@ -62,27 +63,27 @@ const HeatExchangerAnswer = () => {
         <div className="row">
           <label htmlFor="input3">Standard Heat of Reaction at Tr:</label>
           <input type="text" id="input3" name="input3" />
-          J/mol
+          cal/mol
         </div>
         <div className="row">
           <div className="column">
-            <label htmlFor="a">Cp of A (J/mol K)</label>
+            <label htmlFor="a">Cp of A (cal/mol K)</label>
             <input type="text" id="cpa" name="cpa" />
           </div>
           <div className="column">
-            <label htmlFor="b">Cp of B (J/mol K)</label>
+            <label htmlFor="b">Cp of B (cal/mol K)</label>
             <input type="text" id="cpb" name="cpb" />
           </div>
           <div className="column">
-            <label htmlFor="c">Cp of C (J/mol K)</label>
+            <label htmlFor="c">Cp of C (cal/mol K)</label>
             <input type="text" id="cpc" name="cpc" />
           </div>
           <div className="column">
-            <label htmlFor="d">Cp of D (J/mol K)</label>
+            <label htmlFor="d">Cp of D (cal/mol K)</label>
             <input type="text" id="cpd" name="cpd" />
           </div>
         </div>  
-            <h2>Heat of Reaction is :{responses} </h2> 
+            <h2>Heat of Reaction is :{responses} kcal/mol </h2> 
             <button className="button2" onClick={handleButtonClick}>Home</button>
       </div>
     </div>
