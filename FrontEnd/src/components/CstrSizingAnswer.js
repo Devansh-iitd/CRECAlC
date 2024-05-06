@@ -15,7 +15,7 @@ const CstrSizingAnswer = () => {
         navigate('/');
       };
       useEffect( () => {
-        axios.post('http://localhost:5000/functions/tempcalc',formData)
+        axios.post('https://crecalcb.onrender.com/functions/tempcalc',formData)
         .then((response) => {
           //setResponse({Xebs:[],Xmbs:[],Ts:[]})
           //console.log(response.data);

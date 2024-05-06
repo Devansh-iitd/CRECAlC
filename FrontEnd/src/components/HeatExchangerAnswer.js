@@ -13,7 +13,7 @@ const HeatExchangerAnswer = () => {
         navigate('/');
       };
     useEffect(() => {
-      axios.post('http://localhost:5000/functions/HOR',formData)
+      axios.post('https://crecalcb.onrender.com/functions/HOR',formData)
       .then((response) => {
         console.log(response.data);
         setResponse((response.data/1000).toFixed(2));

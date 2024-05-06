@@ -23,7 +23,7 @@ const EquilibriumConversionAnswer = () => {
   };
   useEffect(() => {
     axios
-      .post("http://localhost:5000/functions/equilibriumConversion", formData)
+      .post("https://crecalcb.onrender.com/functions/equilibriumConversion", formData)
       .then((response) => {
         //console.log(response.data);
         setResponse(response.data);
