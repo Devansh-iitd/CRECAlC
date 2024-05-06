@@ -5,7 +5,7 @@ const  odex = require('odex');
 const {Hrx} = require('./Hrx');
 const ATR = (Hrx0,Fa0,Ca0,reversible,T1,T2,T0,E,k1,kc0,Cpa,gasphase=false) => {
     
-
+     console.log(Hrx0,Fa0,Ca0,reversible,T1,T2,T0,E,k1,kc0,Cpa,gasphase)
     
     return function derivative(x,y) {
 
