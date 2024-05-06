@@ -15,19 +15,19 @@ router.route('/adiabaticTubular').post((req,res)=> {
     X=[], T=[],V=[];
     let value=0.2;
 
-    //console.log(f(0.4))
+    console.log(f(2.6))
       
     while(true){
         X.push(f(value));
         T.push(T0-(Hrx0*f(value))/Cpa);
         V.push(value);
         value+=0.1;
-        if(X[X.length-1]-X[X.length-2]<0.0001){
-            value +=0.3;
-        }
+        // if(X[X.length-1]-X[X.length-2]<0.0001){
+        //     value +=0.3;
+        // }
 
-        if(X[X.length-1]-X[X.length-2]<0.000000001)
-            break;
+        // if(X[X.length-1]-X[X.length-2]<0.000000001)
+        //     break;
         if(value>6){
             break;
         }
