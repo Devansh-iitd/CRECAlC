@@ -19,7 +19,7 @@ const AdiabaticTubularAnswer = () => {
 
       console.log(formData);
       useEffect( () => {
-        axios.post('http://localhost:5000/functions/adiabaticTubular',formData)
+        axios.post('https://crecalcb.onrender.com/functions/adiabaticTubular',formData)
         .then((response) => {
           console.log(response.data);
           setResponse(response.data);
@@ -31,13 +31,13 @@ const AdiabaticTubularAnswer = () => {
    // console.log(responses.V)
  const data = 
    responses.V.map((value,index) => {
-      //console.log(value,responses.X[index][0])
+      console.log(value,responses.X[index][0])
        return {x:responses.X[index][0],volume:value.toFixed(2)}
    })
 
 const data2 = 
    responses.V.map((value,index) => {
-      console.log(value,responses.X[index][0])
+      //console.log(value,responses.X[index][0])
        return {temp:responses.T[index].toFixed(2),volume:value.toFixed(2)}
    })
  

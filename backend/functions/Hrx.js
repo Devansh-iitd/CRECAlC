@@ -7,12 +7,15 @@ const Hrx = (Hrx0, coeffs,cps,T,Tr) => {
      coeffs = coeffs.map(Number);
         cps = cps.map(Number);
     console.log(Hrx0,coeffs,cps,T,Tr)
+    coeffs[2]= -coeffs[2];
 
-    for(let i=3; i>=0; i--){
-        console.log(delCp,delHrx0value)
-        delCp += coeffs[i]*cps[i]*(T-Tr)/coeffs[0];
+    for(let i=2; i>=0; i--){
+        //console.log(delCp,delHrx0value)
+        delCp += coeffs[i]*cps[i]/coeffs[0];
+        
         //delHrx0value = coeffs[i]*Hrx0[i]/coeffs[0];
     }
+    //console.log(delCp,T-Tr,delCp*(T-Tr))
 
 
     //console.log(Hrx0 + delCp*(T-Tr));
